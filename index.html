@@ -1,17 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
   <title>VERIFIKASI SURAT SD NEGERI 14 TOBOALI</title> 
-
   <style>
     body {
       margin: 0;
       padding: 0;
-      overflow: hidden; /* Biar ga ada scrollbar */
-      background-color: #0d1117; /* Warna background gelap biar pas loading ga silau */
+      overflow: hidden;
+      background-color: #0d1117;
     }
     iframe {
       border: none;
@@ -23,7 +21,18 @@
 </head>
 <body>
 
-  <iframe src="https://script.google.com/macros/s/AKfycbwZE44dq0gfoSuQRsKMyxFJgt9eoPXzhGVe5kdjn395xW-Viwo674dyIeZ0_iqcZY1s/exec"></iframe>
+  <iframe id="gasFrame" src="about:blank"></iframe>
+
+  <script>
+    (function() {
+      var baseGas = "https://script.google.com/macros/s/AKfycbwZE44dq0gfoSuQRsKMyxFJgt9eoPXzhGVe5kdjn395xW-Viwo674dyIeZ0_iqcZY1s/exec";
+      var search = window.location.search || "";
+      var frame = document.getElementById('gasFrame');
+      if (frame) {
+        frame.src = baseGas + search;
+      }
+    })();
+  </script>
 
 </body>
 </html>
