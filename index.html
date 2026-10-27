@@ -5,11 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Portal Verifikasi Dokumen - SD Negeri 14 Toboali</title>
   
-  <!-- Favicon / Logo Tab Browser SD Negeri 14 Toboali (Kompatibel Penuh GitHub Pages & Hosting Web) -->
-  <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="icon" type="image/png" href="logo-sdn14.png">
-  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-  <link rel="apple-touch-icon" href="logo-sdn14.png">
+  <!-- Favicon / Logo Tab Browser SD Negeri 14 Toboali -->
+  <link rel="icon" type="image/png" href="https://drive.google.com/uc?id=15dFMeQQTeFtHxxqY7UiFdtjgZhW6xgCp&export=download&format=png">
+  <link rel="shortcut icon" type="image/png" href="https://drive.google.com/uc?id=15dFMeQQTeFtHxxqY7UiFdtjgZhW6xgCp&export=download&format=png">
+  <link rel="apple-touch-icon" href="https://drive.google.com/uc?id=15dFMeQQTeFtHxxqY7UiFdtjgZhW6xgCp&export=download&format=png">
   
   <!-- Font Modern Plus Jakarta Sans & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -965,18 +964,6 @@
       // Pasang logo resmi sekolah ke header
       var headerLogo = document.getElementById('headerSchoolLogo');
       if (headerLogo) { headerLogo.src = OFFICIAL_SCHOOL_LOGO_BASE64; }
-
-      // Garansi Favicon Tab Browser (Otomatis fallback ke Base64 jika path relatif terkendala)
-      try {
-        var favIcons = document.querySelectorAll("link[rel*='icon']");
-        var testFav = new Image();
-        testFav.onerror = function() {
-          for (var fi = 0; fi < favIcons.length; fi++) {
-            favIcons[fi].href = OFFICIAL_SCHOOL_LOGO_BASE64;
-          }
-        };
-        testFav.src = 'favicon.png';
-      } catch (fe) {}
 
       // 1. PRIORITAS UTAMA: Jika halaman dibuka via Barcode (data sudah di-preload dari server 0 detik)
       if (PRELOADED_DATA && PRELOADED_DATA.isVerified) {
