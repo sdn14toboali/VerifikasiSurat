@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VERIFIKASI Surat SD Negeri 14 Toboali</title> 
+  <!-- Favicon Tab Browser (SD Negeri 14 Toboali) -->
+  <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/d/15dFMeQQTeFtHxxqY7UiFdtjgZhW6xgCp">
+  <link rel="apple-touch-icon" href="https://lh3.googleusercontent.com/d/15dFMeQQTeFtHxxqY7UiFdtjgZhW6xgCp">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #0d1117;
+    }
+    iframe {
+      border: none;
+      width: 100vw;
+      height: 100vh;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Iframe Google Apps Script dengan penerusan otomatis nomor surat dari URL -->
+  <iframe id="gasFrame" src="about:blank"></iframe>
+
+  <script>
+    (function() {
+      // Alamat backend inti Web App Google Apps Script
+      var baseGas = "https://script.google.com/macros/s/AKfycbwZE44dq0gfoSuQRsKMyxFJgt9eoPXzhGVe5kdjn395xW-Viwo674dyIeZ0_iqcZY1s/exec";
+      
+      // Ambil parameter nomor surat (?no=...&q=...) dari URL GitHub Pages
+      var search = window.location.search || "";
+      
+      // Teruskan parameter langsung ke dalam iframe agar nomor surat otomatis terisi dan divalidasi
+      var frame = document.getElementById('gasFrame');
+      if (frame) {
+        frame.src = baseGas + search;
+      }
+    })();
+  </script>
+
+</body>
+</html>
